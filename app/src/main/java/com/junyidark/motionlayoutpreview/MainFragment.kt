@@ -21,7 +21,7 @@ class MainFragment : Fragment() {
     private lateinit var backgroundColor: AppCompatImageView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.layout_after, container, false)
+        return inflater.inflate(R.layout.layout_before, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -29,13 +29,8 @@ class MainFragment : Fragment() {
 
         toolbar = view.findViewById(R.id.toolbar)
         background = view.findViewById(R.id.background)
-        backgroundColor = view.findViewById(R.id.background_color)
 
         setupToolbar()
-
-        val bgResId = getBackgroundResId()
-
-        setRandomBackground(view, bgResId)
     }
 
     private fun getBackgroundResId(): Int {
