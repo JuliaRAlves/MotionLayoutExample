@@ -44,7 +44,7 @@
             android:id="@+id/background" >
             <CustomAttribute
                 motion:attributeName="alpha"
-                motion:customFloatValue="0.4" />
+                motion:customFloatValue="0.2" />
             <Motion motion:motionStagger="2" />
         </Constraint>
         <Constraint
