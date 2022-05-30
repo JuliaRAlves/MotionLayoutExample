@@ -12,9 +12,9 @@ This app should be a clone from the artist page on [Letras App](https://play.goo
 
 *Original / Clone before MotionLayout / Clone after MotionLayout*
 <p float="left">
-  <img src="https://user-images.githubusercontent.com/50219994/171047372-69d274df-d0d9-451d-b188-8305748111e7.gif" width="300" />
-  <img src="https://user-images.githubusercontent.com/50219994/171047381-d74f2460-7ac2-4cf0-af6b-862103c280dd.gif" width="300" />
-  <img src="https://user-images.githubusercontent.com/50219994/171047392-94e3f76c-eefa-471f-aae3-7d35c4a6c9c7.gif" width="300" />
+  <img src="https://user-images.githubusercontent.com/50219994/171047372-69d274df-d0d9-451d-b188-8305748111e7.gif" width="200" />
+  <img src="https://user-images.githubusercontent.com/50219994/171047381-d74f2460-7ac2-4cf0-af6b-862103c280dd.gif" width="200" />
+  <img src="https://user-images.githubusercontent.com/50219994/171047392-94e3f76c-eefa-471f-aae3-7d35c4a6c9c7.gif" width="200" />
 </p>
 
 ## Some documentation
