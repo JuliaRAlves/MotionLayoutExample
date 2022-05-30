@@ -39,7 +39,7 @@ class MainFragment : Fragment() {
         return bgList.shuffled()[0]
     }
 
-    private fun setRandomBackground(view: View, bgResId: Int) {
+    private fun setBackgroundAndColor(view: View, bgResId: Int) {
         background.setImageResource(bgResId)
 
         val dominantColor = getDominantColorByDrawableResId(view, bgResId)
