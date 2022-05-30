@@ -3,28 +3,42 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:motion="http://schemas.android.com/apk/res-auto">
 
+    <!-- Some behaviors of the transition are here like start and end points,
+        duration, triggers and other attributes.-->
     <Transition
         motion:constraintSetEnd="@+id/end"
         motion:constraintSetStart="@id/start"
         motion:duration="1000">
         <KeyFrameSet>
+            <!-- This key attribute refers to the transformation of the background
+                view during the animation, which in this case happens with scaleX. -->
             <KeyAttribute
                 motion:motionTarget="@+id/background"
                 motion:framePosition="100"
                 android:scaleX="1.2" />
         </KeyFrameSet>
+        <!-- The animation trigger in this case is the swipe action as it's
+            described here. -->
         <OnSwipe
             motion:touchAnchorId="@+id/background"
             motion:touchAnchorSide="bottom" />
     </Transition>
 
+
+    <!-- Set of constraints with their initial states. This set should contain
+        only constraints that will change during the animation. The constraints'
+        attributes described here should also be the ones which are gonna be
+        changed. -->
     <ConstraintSet android:id="@+id/start">
         <Constraint
             android:id="@+id/artist_toolbar">
+            <!-- This custom attribute is defined because the alpha can't be
+                changed directly in the constraint as size can. The motionStagger
+                attribute defines the pace of the alpha's change. -->
             <CustomAttribute
                 motion:attributeName="alpha"
                 motion:customFloatValue="0"/>
-            <Motion motion:motionStagger="2" />
+            <Motion motion:motionStagger="1" />
         </Constraint>
         <Constraint
             android:layout_height="280dp"
@@ -33,10 +47,14 @@
             <CustomAttribute
                 motion:attributeName="alpha"
                 motion:customFloatValue="1" />
-            <Motion motion:motionStagger="2" />
+            <Motion motion:motionStagger="1" />
         </Constraint>
     </ConstraintSet>
 
+    <!-- Set of constraints with their final states. This set should contain
+        only constraints that will change during the animation. The constraints'
+        attributes described here should also be the ones which are gonna be
+        changed. -->
     <ConstraintSet android:id="@+id/end">
         <Constraint
             android:layout_height="80dp"
@@ -45,14 +63,8 @@
             <CustomAttribute
                 motion:attributeName="alpha"
                 motion:customFloatValue="0.2" />
-            <Motion motion:motionStagger="2" />
+            <Motion motion:motionStagger="1" />
         </Constraint>
-        <Constraint
-            android:id="@+id/app_bar"
-            android:layout_width="match_parent"
-            android:layout_height="?actionBarSize"
-            motion:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="24dp" />
         <Constraint
             android:id="@+id/artist_toolbar">
             <CustomAttribute

@@ -15,6 +15,10 @@ class MainActivity : AppCompatActivity() {
         setupStatusBar()
     }
 
+    /**
+     * This method sets the status bar to be translucent and the navigation bar
+     * to be opaque.
+     */
     private fun setupStatusBar() {
         if (!(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N && isInMultiWindowMode)) {
             window.addFlags(WindowManager.LayoutParams.FLAG_LAYOUT_IN_OVERSCAN);

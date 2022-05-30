@@ -5,7 +5,11 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     app:layoutDescription="@xml/layout_after_scene">
+    <!-- All information of the layout's behavior it's
+        inside of the xml defined in app:layoutDescription. -->
 
+    <!-- View used to make the color effect in the background image.
+        The correct color of this view is set programmatically.-->
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/background_color"
         android:layout_width="match_parent"
@@ -14,6 +18,10 @@
         app:layout_constraintBottom_toBottomOf="@id/background"
         app:layout_constraintTop_toTopOf="@id/background" />
 
+    <!-- Background image view from the header. Initially,
+        it's expanded showing the whole image, and by the end
+        of the animation, it's collapsed. The image is set
+        programmatically. -->
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/background"
         android:layout_width="match_parent"
@@ -22,6 +30,9 @@
         app:layout_collapseMode="pin"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Name of the artist to be shown as if it was part of
+        the toolbar. Starts transparent and gets opaque in the
+        end of the animation. -->
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/artist_toolbar"
         android:layout_width="match_parent"
@@ -37,6 +48,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/app_bar" />
 
+    <!-- Translucent app bar containing the toolbar with the
+        necessary actions. No change should happen with this
+        layout during the animation. -->
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/app_bar"
         android:layout_width="match_parent"
@@ -52,6 +66,10 @@
             android:layout_height="?actionBarSize" />
     </com.google.android.material.appbar.AppBarLayout>
 
+    <!-- This representes any scrollable content that could
+        exist in this page. Must be NestedScrollView so it
+        can handle both swipe actions: scrolling and the
+        animation swipe. -->
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollView"
         android:layout_width="match_parent"
